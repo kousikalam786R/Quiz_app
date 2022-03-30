@@ -1,0 +1,46 @@
+<div class="container col-lg-3 ">
+    <div class="row">
+    <div class=" col-lg-4 reward mt-3">
+        <img src="../../../assets/images/trophy.png" alt="" height="20" width="20">
+
+    </div>
+    <div class=" col-lg-4 quiz mt-3">
+        <p >Quiz</p>
+    </div>
+    <div class=" col-lg-4 profile mt-3">
+        <img src="../../../assets/images/user.png" alt="" height="20" width="20">
+    </div>
+</div>
+
+<div class=" main ">
+    <p>04/05</p>
+    <h4>
+      {{data.question}}
+    </h4>
+    <ul >
+      <li><button class="btn" (click)="onSelectedProduct()">{{data.options.a}}</button></li> 
+        <li ><button class="btn"(click)="onSelectedProduct()">{{data.options.b}}</button></li>
+        <li><button class="btn"(click)="onSelectedProduct()">{{data.options.c}}</button></li>
+        <li><button class="btn"(click)="onSelectedProduct()">{{data.options.d}}</button></li>
+    <li><button  *ngIf="productSelected" (click)="getNextQuestion()"  class="next mt-4" >Next</button></li>
+
+        
+        
+    </ul>
+    
+
+</div>
+
+</div>
+
+
+
+
+<!-- <li *ngFor="let data of questionData">
+<span>{{data.question}}</span>
+    <button class="btn btn-primary">{{data.options.a}}</button>
+    <button class="btn btn-primary">{{data.options.b}}</button>
+    <button class="btn btn-primary">{{data.options.c}}</button>
+    <button class="btn btn-primary">{{data.options.d}}</button>
+
+</li> -->
