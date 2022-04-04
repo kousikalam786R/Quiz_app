@@ -21,7 +21,10 @@ router.get('/', function(req, res, next) {
 
 router.post('/signup', function(req, res, next) {
   connection.connect();
-  connection.query("INSERT INTO users (name,email,password) VALUES ('amir','amir@gmail.com','asdf');", (err, result) => {
+  var name=req.body.name
+  var email=req.body.email
+  var password=req.body.password
+  connection.query(`INSERT INTO users (name,email,password) VALUES ('${name}','${email}','${password}');`, (err, result) => {
     if (err) throw err;
   });
   console.log("user created")
