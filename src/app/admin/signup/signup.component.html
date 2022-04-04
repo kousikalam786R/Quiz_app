@@ -2,25 +2,26 @@
     <div class="user center">
         <img src="../../../assets/images/user.png" alt="" height="80">
     </div>
-  <form >
+  <form [formGroup]="formData" (ngSubmit)="submitData(formData.value)" >
     <div class="form-group">
         <label for="username">Name</label>
-        <input type="text" class="form-control">
+        <input type="text" class="form-control" name="name" formControlName="name">
     </div>
     <div class="form-group">
         <label for="email">Email</label>
-        <input type="text" class="form-control">
+        <input type="text" class="form-control" name="email" formControlName="email">
     </div>
     <div class="form-group">
         <label for="password">Password</label>
-        <input type="password" class="form-control">
+        <input type="password" class="form-control" name="password" formControlName="password">
     </div>
-    </form> 
     <div class="signup">
-        <button class="btn btn1" routerLink="/home">Sign Up</button>
+        <button class="btn btn1" type="submit">Sign Up</button>
     </div>
+</form> 
+
     <hr style="opacity: 1; color: white;">
     <div class="login">
-        <button class="btn btn2"routerLink="/login">Log In</button>
+        <button class="btn btn2" routerLink="/login" type="submit">Log In</button>
     </div>
 </div>

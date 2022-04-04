@@ -10,6 +10,7 @@ import { QuizComponent } from './quiz/quiz.component';
 import { QuetionComponent } from './quiz/quetions/quetion.component';
 import { HttpClientModule } from '@angular/common/http';
 import { QuestionpipePipe } from './questionpipe.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -28,6 +29,8 @@ import { QuestionpipePipe } from './questionpipe.pipe';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
    
     
   

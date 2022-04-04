@@ -30,9 +30,12 @@ productSelected:boolean=false;
 
  
 onSelectedProduct(){
-  this.productSelected=true;
+  this.productSelected=!this.productSelected;
 }
+
 getNextQuestion(){
+  this.productSelected=!this.productSelected;
+  
   this.question_no++;
   this.showQuestion(this.question_no)
 }
